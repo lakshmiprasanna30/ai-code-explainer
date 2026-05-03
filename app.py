@@ -1,11 +1,12 @@
 import streamlit as st
 from groq import Groq
+from openai import OpenAI
 from dotenv import load_dotenv
 import os
 
 
 load_dotenv()
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+client = OpenAI(api_key=os.getenv("GROQ_API_KEY"))
 
 
 st.set_page_config(page_title="AI Code Explainer", page_icon=" ")
